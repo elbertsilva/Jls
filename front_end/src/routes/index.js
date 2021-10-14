@@ -6,6 +6,7 @@ import View from "../view/registration/";
 import Home from "../view/home/";
 import Player from "../view/player";
 import Registration from "../view/registration";
+import Contacts from "../view/home/contacts";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -27,6 +28,8 @@ const Routes = () => {
         <PrivateRoute exact path="/home" component={() => <Home />} />
         <PrivateRoute exact path="/view" component={() => <View />} />
         <PrivateRoute exact path="/player" component={() => <Player />} />
+        <PrivateRoute exact path="/contact" component={() => <Contacts />} />
+
         <PrivateRoute
           exact
           path="/registration"

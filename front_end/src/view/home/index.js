@@ -14,7 +14,9 @@ function Home() {
             </Li>
           </Ul>
         </Li>
-        <Li>Contato</Li>
+        <Li>
+          <Link to={"/contact"}>Contato</Link>
+        </Li>
       </Ul>
     </Nav>
   );
