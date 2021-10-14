@@ -11,23 +11,10 @@ export const Container = styled.div`
     grid-template-columns: 1fr;
   }
 `;
-
-export const Header = styled.div`
-  background-color: #000;
-  border: 3px solid #000;
+export const ButtonReturn = styled.button`
   display: flex;
-  grid-column: 1/-1;
+  margin-left: auto;
   justify-content: flex-end;
-  /* margin-bottom: 40px; */
-  padding: 10px;
-  width: 100%;
-  @media (max-width: 1024px) {
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-`;
-
-export const ButtonRetorn = styled.button`
   background-color: transparent;
   border-color: #fff;
   border-radius: 10px;
@@ -49,10 +36,17 @@ export const ButtonRetorn = styled.button`
     color: #000;
   }
 `;
-
 export const Content = styled.div`
   align-items: center;
-  background-color: #0066ff;
+  /* background-color: #0066ff; */
+  background-image: linear-gradient(
+    to left,
+    #d9dff8,
+    #e4e7fa,
+    #eeeefb,
+    #f7f7fd,
+    #ffffff
+  );
   border-radius: 10px;
   box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
     0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
@@ -64,12 +58,10 @@ export const Content = styled.div`
   padding: 30px;
   width: 100%;
 `;
-
 export const Title = styled.h1`
   grid-column: 1/-1;
   text-align: center;
 `;
-
 export const Button = styled.button`
   background-color: ${({ color }) => color};
   border-color: #000;
@@ -82,7 +74,6 @@ export const Button = styled.button`
   margin: 10px;
   padding: 10px 25px;
 `;
-
 export const Table = styled.table`
   background-color: #0066ff;
   box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
@@ -92,7 +83,6 @@ export const Table = styled.table`
     margin: 0 10px;
   }
 `;
-
 export const Input = styled.input`
   font-size: 1.5rem;
   padding: 10px;

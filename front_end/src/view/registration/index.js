@@ -8,7 +8,7 @@ import {
   Table,
   Button,
   Title,
-  ButtonRetorn,
+  ButtonReturn,
   Input,
 } from "./styles";
 import TableAdd from "../../components/tableAdd";
@@ -66,15 +66,13 @@ function Registration() {
 
   return (
     <>
-      <Header>
-        <ButtonRetorn
-          onClick={() => {
-            history.push("/home");
-          }}
-        >
-          Retorno
-        </ButtonRetorn>
-      </Header>
+      <ButtonReturn
+        onClick={() => {
+          history.push("/home");
+        }}
+      >
+        Retorno
+      </ButtonReturn>
       <Container>
         <div>
           <Content>

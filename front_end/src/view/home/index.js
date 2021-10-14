@@ -5,7 +5,9 @@ function Home() {
   return (
     <Nav class="menu">
       <Ul>
-        <Li>Inicio</Li>
+        <Li>
+          <Link to={"/home"}>Inicio</Link>
+        </Li>
         <Li>
           <Link to={"/player"}>Jogador</Link>
           <Ul>
@@ -18,7 +20,9 @@ function Home() {
           <Link to={"/contact"}>Contato</Link>
         </Li>
       </Ul>
-      <ButtonLogout>Sair</ButtonLogout>
+      <ButtonLogout>
+        <Link to={"/"}>Sair</Link>
+      </ButtonLogout>
     </Nav>
   );
 }

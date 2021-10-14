@@ -1,24 +1,16 @@
 import React from "react";
 import server from "../../server/server";
 import { useHistory } from "react-router-dom";
-// import {
-//   Container,
-//   Content,
-//   Header,
-//   Table,
-//   Button,
-//   Title,
-//   ButtonLogout,
-//   Input,
-// } from "./styles";
-import Table from "../../components/table";
+import { Div } from "./styles";
+import Table from "../../components/table/";
+import { ButtonReturn } from "./styles";
 
 // const initialState = { id: undefined, nome: "", cidade: "" };
 
 function Player() {
   // const [post, setPost] = React.useState(initialState);
   const [teste, setGet] = React.useState(null);
-  // const history = useHistory();
+  const history = useHistory();
   async function getTeste() {
     const data = await server.get("/teste");
     console.log(data.data);
@@ -66,7 +58,7 @@ function Player() {
     //         Logout
     //       </ButtonLogout>
     //     </Header>
-    //     <div>
+    //     <Div>
     //       <Content>
     //         <Title>Make your registration</Title>
 
@@ -115,14 +107,24 @@ function Player() {
     //       </Table>
     //     </div>
     //   </Container>
-
-    <Table
-      columnNames={["nome", "cidade", "data_nasc", "posicao"]}
-      // columns={teste ? Object.keys(teste[0]) : []}
-      columns={["nome", "cidade", "date_nasc", "posicao"]}
-      data={teste ? teste : []}
-      title="Lista de jogadores"
-    ></Table>
+    <>
+      <ButtonReturn
+        onClick={() => {
+          history.push("/home");
+        }}
+      >
+        Return
+      </ButtonReturn>
+      <Div>
+        <Table
+          columnNames={["nome", "cidade", "data_nasc", "posicao"]}
+          // columns={teste ? Object.keys(teste[0]) : []}
+          columns={["nome", "cidade", "date_nasc", "posicao"]}
+          data={teste ? teste : []}
+          title="Lista de jogadores"
+        ></Table>
+      </Div>
+    </>
   );
 }
 
