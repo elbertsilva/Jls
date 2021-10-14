@@ -1,5 +1,5 @@
 import React from "react";
-import server from "../server/server";
+import server from "../../server/server";
 import { useHistory } from "react-router-dom";
 import {
   Container,

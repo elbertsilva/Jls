@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import { isAutenticated } from "../auth";
 import Auth from "../auth";
-import View from "../view";
-import Home from "../view/home/index";
+import View from "../view/cadastro/";
+import Home from "../view/home/";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route

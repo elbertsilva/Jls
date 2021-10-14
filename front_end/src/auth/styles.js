@@ -6,7 +6,8 @@ export const Container = styled.div`
   justify-content: center;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 150, 8), transparent);
+  /* background: linear-gradient(to right, rgba(0, 0, 150, 8), transparent); */
+  background-image: linear-gradient(to left,#d9dff8,#e4e7fa,#eeeefb,#f7f7fd,#ffffff);
 `;
 
 export const Content = styled.div`
