@@ -117,7 +117,9 @@ function Player() {
     //   </Container>
 
     <Table
-      columns={teste ? Object.keys(teste[0]) : []}
+      columnNames={["nome", "cidade", "data_nasc", "posicao"]}
+      // columns={teste ? Object.keys(teste[0]) : []}
+      columns={["nome", "cidade", "date_nasc", "posicao"]}
       data={teste ? teste : []}
       title="Lista de jogadores"
     ></Table>

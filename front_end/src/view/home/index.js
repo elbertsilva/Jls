@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Ul, Li, Link } from "./styles";
+import { Nav, Ul, Li, Link, ButtonLogout } from "./styles";
 
 function Home() {
   return (
@@ -18,6 +18,7 @@ function Home() {
           <Link to={"/contact"}>Contato</Link>
         </Li>
       </Ul>
+      <ButtonLogout>Sair</ButtonLogout>
     </Nav>
   );
 }

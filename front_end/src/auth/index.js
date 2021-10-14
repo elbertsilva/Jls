@@ -40,27 +40,29 @@ function Auth() {
           type="text"
           onChange={(e) => setLogin({ ...login, name: e.target.value })}
           value={login.name}
-          style={{ width: "100%" }}
+          style={{ fontSize: "2rem", width: "80%" }}
         ></input>
         <Title>Password</Title>
         <input
           type="password"
           onChange={(e) => setLogin({ ...login, password: e.target.value })}
           value={login.password}
-          style={{ width: "100%" }}
+          style={{ fontSize: "2rem", width: "80%" }}
         ></input>
         {error}
         <button
           onClick={handleLogin}
           style={{
-            background: "#0066ff",
+            background: "#000",
+            color: "#fff",
+            cursor: "pointer",
             fontSize: "1.8rem",
             marginTop: "10px",
             borderRadius: "10px",
             width: "30%",
           }}
         >
-          Enter
+          Entrar
         </button>
       </Content>
     </Container>
