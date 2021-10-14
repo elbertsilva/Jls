@@ -18,6 +18,10 @@ export const Content = styled.div`
   grid-template-columns: repeat(2, 1fr);
   font-size: 1.5rem;
   padding: 20px;
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 export const ButtonReturn = styled.button`
   display: flex;
