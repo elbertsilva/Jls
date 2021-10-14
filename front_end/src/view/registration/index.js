@@ -12,7 +12,11 @@ import { useHistory } from "react-router-dom";
 //   Input,
 // } from "./styles";
 import TableAdd from "../../components/tableAdd";
-import { ButtonEdit } from "../../components/tableAdd/styles";
+import {
+  ButtonCadastrar,
+  ButtonEdit,
+  ButtonDelete,
+} from "../../components/tableAdd/styles";
 
 // const initialState = { id: undefined, nome: "", cidade: "" };
 
@@ -123,6 +127,16 @@ function Registration() {
       title="Cadastro de jogadores"
       columnButtons={[
         (data) => (
+          <ButtonCadastrar
+            onClick={() => {
+              // console.log(data);
+              data();
+            }}
+          >
+            Cadastrar
+          </ButtonCadastrar>
+        ),
+        (data) => (
           <ButtonEdit
             onClick={() => {
               // console.log(data);
@@ -131,6 +145,16 @@ function Registration() {
           >
             Editar
           </ButtonEdit>
+        ),
+        (data) => (
+          <ButtonDelete
+            onClick={() => {
+              // console.log(data);
+              data();
+            }}
+          >
+            Deletar
+          </ButtonDelete>
         ),
       ]}
     ></TableAdd>

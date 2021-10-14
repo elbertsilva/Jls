@@ -32,6 +32,8 @@ import {
   PageItems,
   FilterPage,
   ButtonEdit,
+  ButtonCadastrar,
+  ButtonDelete,
 } from "./styles";
 
 const defaultSettings = {

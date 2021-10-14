@@ -161,18 +161,47 @@ export const ArrowPrevNext = styled.button`
   min-height: 50px;
 `;
 
+export const ButtonCadastrar = styled.button`
+  border: 3px solid #00ff00;
+  border-radius: 5px;
+  color: #000;
+  font-size: 1rem;
+  /* height: "30px"; */
+  padding: 10px;
+  /* width: 10%; */
+  &:hover {
+    background-color: #fff;
+    border-color: #00ff00;
+    color: #00ff00;
+  }
+`;
+
 export const ButtonEdit = styled.button`
   border: 3px solid #f1c72f;
   border-radius: 5px;
   color: #000;
   font-size: 1rem;
-  height: "30px";
+  /* height: "30px"; */
   padding: 10px;
-  width: 10%;
+  /* width: 10%; */
   &:hover {
     background-color: #fff;
     border-color: #f1c72f;
     color: #f1c72f;
+  }
+`;
+export const ButtonDelete = styled.button`
+  border: 3px solid #ff3300;
+  border-radius: 5px;
+  color: #000;
+  font-size: 1rem;
+  /* height: "30px"; */
+  padding: 10px;
+  /* width: 10%; */
+  &:hover {
+    background-color: #fff;
+    border-color: #ff3300;
+    color: #ff3300;
   }
 `;
 
