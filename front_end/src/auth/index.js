@@ -1,7 +1,7 @@
 import React from "react";
 import server from "../server/server";
 import { useHistory } from "react-router-dom";
-import { Container, Content, Title } from "./styles";
+import { Container, Content, Title, Button } from "./styles";
 import { useDispatch } from "react-redux";
 import { fetchError, fetchStarted, fetchSuccess } from "../store/login";
 
@@ -50,20 +50,8 @@ function Auth() {
           style={{ fontSize: "2rem", width: "80%" }}
         ></input>
         {error}
-        <button
-          onClick={handleLogin}
-          style={{
-            background: "#000",
-            color: "#fff",
-            cursor: "pointer",
-            fontSize: "1.8rem",
-            marginTop: "10px",
-            borderRadius: "10px",
-            width: "30%",
-          }}
-        >
-          Entrar
-        </button>
+
+        <Button to={"/home"}>Enviar</Button>
       </Content>
     </Container>
   );
