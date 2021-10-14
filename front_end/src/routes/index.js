@@ -2,8 +2,10 @@ import React from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import { isAutenticated } from "../auth";
 import Auth from "../auth";
-import View from "../view/cadastro/";
+import View from "../view/registration/";
 import Home from "../view/home/";
+import Player from "../view/player";
+import Registration from "../view/registration";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -24,6 +26,12 @@ const Routes = () => {
         <Route exact path="/" render={() => <Auth />} />
         <PrivateRoute exact path="/home" component={() => <Home />} />
         <PrivateRoute exact path="/view" component={() => <View />} />
+        <PrivateRoute exact path="/player" component={() => <Player />} />
+        <PrivateRoute
+          exact
+          path="/registration"
+          component={() => <Registration />}
+        />
       </Switch>
     </BrowserRouter>
   );

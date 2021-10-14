@@ -7,10 +7,10 @@ function Home() {
       <Ul>
         <Li>Inicio</Li>
         <Li>
-          Jogador
+          <Link to={"/player"}>Jogador</Link>
           <Ul>
             <Li>
-              <Link to={"/view"}>Cadastrar jogador</Link>
+              <Link to={"/registration"}>Cadastrar jogador</Link>
             </Li>
           </Ul>
         </Li>
