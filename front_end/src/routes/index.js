@@ -22,7 +22,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 );
 const Routes = () => {
   return (
-    <BrowserRouter basename="/React-login-and-crud">
+    <BrowserRouter basename="/Jsl">
       <Switch>
         <Route exact path="/" render={() => <Auth />} />
         <PrivateRoute exact path="/home" component={() => <Home />} />
