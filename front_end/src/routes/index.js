@@ -25,16 +25,16 @@ const Routes = () => {
     <BrowserRouter basename="/Jsl">
       <Switch>
         <Route exact path="/" render={() => <Auth />} />
-        <PrivateRoute exact path="/home" component={() => <Home />} />
+        {/* <PrivateRoute exact path="/home" component={() => <Home />} />
         <PrivateRoute exact path="/view" component={() => <View />} />
         <PrivateRoute exact path="/player" component={() => <Player />} />
-        <PrivateRoute exact path="/contact" component={() => <Contacts />} />
+        <PrivateRoute exact path="/contact" component={() => <Contacts />} /> */}
 
-        <PrivateRoute
-          exact
-          path="/registration"
-          component={() => <Registration />}
-        />
+        <Route exact path="/home" component={() => <Home />} />
+        <Route exact path="/view" component={() => <View />} />
+        <Route exact path="/player" component={() => <Player />} />
+        <Route exact path="/contact" component={() => <Contacts />} />
+        <Route exact path="/registration" component={() => <Registration />} />
       </Switch>
     </BrowserRouter>
   );
