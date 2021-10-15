@@ -113,7 +113,7 @@ function Player() {
           history.push("/home");
         }}
       >
-        Return
+        Retorno
       </ButtonReturn>
       <Div>
         <Table
