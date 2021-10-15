@@ -45,4 +45,5 @@ export const Button = styled(Link)`
   border-radius: 10px;
   width: 30%;
   text-decoration: none;
+  text-align: center;
 `;

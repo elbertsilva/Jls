@@ -50,9 +50,6 @@ export const ButtonLogout = styled.button`
   box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
     0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
   border-color: transparent;
-  height: 4.5vh;
-  width: 10%;
-  margin-right: 0;
   cursor: pointer;
   font-size: 2rem;
   color: #fff;
@@ -69,4 +66,5 @@ export const ButtonLogout = styled.button`
     );
     color: #000;
   }
+  text-align: center;
 `;
