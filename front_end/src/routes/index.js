@@ -30,11 +30,11 @@ const Routes = () => {
         <PrivateRoute exact path="/player" component={() => <Player />} />
         <PrivateRoute exact path="/contact" component={() => <Contacts />} /> */}
 
-        <Route exact path="/home" component={() => <Home />} />
-        <Route exact path="/view" component={() => <View />} />
-        <Route exact path="/player" component={() => <Player />} />
-        <Route exact path="/contact" component={() => <Contacts />} />
-        <Route exact path="/registration" component={() => <Registration />} />
+        <Route exact path="/home" render={() => <Home />} />
+        <Route exact path="/view" render={() => <View />} />
+        <Route exact path="/player" render={() => <Player />} />
+        <Route exact path="/contact" render={() => <Contacts />} />
+        <Route exact path="/registration" render={() => <Registration />} />
       </Switch>
     </BrowserRouter>
   );
