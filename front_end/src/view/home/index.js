@@ -14,6 +14,9 @@ function Home() {
             <Li>
               <Link to={"/registration"}>Cadastrar jogador</Link>
             </Li>
+            <Li>
+              <Link to={"/spent"}>Gasto jogador</Link>
+            </Li>
           </Ul>
         </Li>
         <Li>

@@ -89,7 +89,7 @@ export const ButtonReturn = styled.button`
   color: #fff;
   cursor: pointer;
   display: flex;
-  font-size: 1.8rem;
+  font-size: 1rem;
   justify-content: flex-end;
   margin-left: auto;
   padding: 5px;

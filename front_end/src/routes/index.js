@@ -7,6 +7,7 @@ import Home from "../view/home/";
 import Player from "../view/player";
 import Registration from "../view/registration";
 import Contacts from "../view/home/contacts";
+import Spent from "../view/spent";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -35,6 +36,7 @@ const Routes = () => {
         <Route exact path="/player" render={() => <Player />} />
         <Route exact path="/contact" render={() => <Contacts />} />
         <Route exact path="/registration" render={() => <Registration />} />
+        <Route exact path="/spent" render={() => <Spent />} />
       </Switch>
     </BrowserRouter>
   );

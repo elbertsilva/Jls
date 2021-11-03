@@ -34,7 +34,7 @@ export const ButtonReturn = styled.button`
     0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
   color: #fff;
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 1rem;
   padding: 5px;
   &:hover {
     background-image: linear-gradient(
