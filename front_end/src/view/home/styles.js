@@ -4,12 +4,24 @@ import { Link as Route } from "react-router-dom";
 export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 export const Ul = styled.ul`
   cursor: pointer;
   padding: 0;
   ul {
     display: none;
+  }
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 `;
 export const Li = styled.li`
