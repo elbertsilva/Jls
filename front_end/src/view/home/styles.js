@@ -5,9 +5,10 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   @media (max-width: 1200px) {
+    align-items: center;
+    font-size: small;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
 `;
 export const Ul = styled.ul`
@@ -17,11 +18,11 @@ export const Ul = styled.ul`
     display: none;
   }
   @media (max-width: 1200px) {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    width: 100%;
     justify-content: center;
-    align-items: center;
+    width: 100%;
   }
 `;
 export const Li = styled.li`
@@ -52,21 +53,21 @@ export const Li = styled.li`
   }
 `;
 export const Link = styled(Route)`
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
   &:hover {
     color: #000;
   }
 `;
 export const ButtonLogout = styled.button`
+  background: transparent;
+  border-color: transparent;
+  border-radius: 5px;
   box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
     0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
-  border-color: transparent;
   cursor: pointer;
   font-size: 1rem;
   color: #fff;
-  background: transparent;
-  border-radius: 5px;
   &:hover {
     background-image: linear-gradient(
       to left,
