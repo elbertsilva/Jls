@@ -114,7 +114,7 @@ function Registration() {
           <TableAdd
             columns={teste ? Object.keys(teste[0]) : []}
             data={teste ? teste : []}
-            title="Cadastro de jogadores"
+            title="Lista de jogadores"
             columnButtons={[
               (data) => (
                 <ButtonEdit onClick={() => handleEdit(data)}>Editar</ButtonEdit>

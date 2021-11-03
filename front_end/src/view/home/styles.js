@@ -17,7 +17,7 @@ export const Li = styled.li`
   border-radius: 5px;
   color: #fff;
   float: left;
-  font-size: 1.5rem;
+  font-size: 1rem;
   height: 40px;
   line-height: 40px;
   list-style: none;
@@ -51,7 +51,7 @@ export const ButtonLogout = styled.button`
     0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
   border-color: transparent;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1rem;
   color: #fff;
   background: transparent;
   border-radius: 5px;

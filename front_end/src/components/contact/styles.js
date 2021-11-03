@@ -16,7 +16,7 @@ export const Content = styled.div`
     0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 20px;
   @media (max-width: 800px) {
     display: flex;
