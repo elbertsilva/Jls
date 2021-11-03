@@ -1,13 +1,9 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { FullscreenExit } from "@material-ui/icons";
 
 export const Container = styled.div`
   align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  width: 100%;
-  /* background: linear-gradient(to right, rgba(0, 0, 150, 8), transparent); */
   background-image: linear-gradient(
     to left,
     #d9dff8,
@@ -16,6 +12,10 @@ export const Container = styled.div`
     #f7f7fd,
     #ffffff
   );
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
 `;
 
 export const Content = styled.div`
@@ -25,28 +25,29 @@ export const Content = styled.div`
     0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
   display: grid;
   justify-items: center;
-  padding: 30px;
-  width: 30%;
   min-height: 40%;
-  /* gap: 10px; */
+  padding: 30px;
+  /* width: 30%; */
+  @media (max-width: 1200px) {
+    grid-column: auto;
+  }
 `;
 
 export const Title = styled.label`
-  text-align: center;
   font-size: 1.8rem;
+  text-align: center;
 `;
 
 export const Button = styled(Link)`
+  align-items: center;
   background: #000;
+  border-radius: 10px;
   color: #fff;
   cursor: pointer;
-  font-size: 1.8rem;
-  margin-top: 10px;
-  border-radius: 10px;
-  width: 30%;
-  text-decoration: none;
-  /* text-align: center; */
   display: flex;
+  font-size: 1rem;
   justify-content: center;
-  align-items: center;
+  margin-top: 10px;
+  text-decoration: none;
+  width: 30%;
 `;
