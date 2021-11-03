@@ -27,6 +27,24 @@ app.get("/teste", (req, res, next) => {
     })
     .catch(console.log);
 });
+app.get("/spent", (req, res, next) => {
+  knex({
+    client: "mysql2",
+    connection: {
+      host: "localhost",
+      user: "root",
+      password: "1234",
+      database: "teste",
+    },
+  })
+    .raw(
+      "select *,(spent.chuteira*spent.valorChuteira)+(spent.viagem+spent.valorViagem) as total from spent"
+    )
+    .then((data) => {
+      res.json(data[0]);
+    })
+    .catch(console.log);
+});
 app.post("/cadastro", (req, res, next) => {
   knex({
     client: "mysql2",

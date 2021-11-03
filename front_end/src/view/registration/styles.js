@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* justify-items: center; */
   gap: 10px;
   padding: 20px;
   @media (max-width: 1024px) {
@@ -22,7 +21,7 @@ export const ButtonReturn = styled.button`
     0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
   color: #fff;
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 1rem;
   padding: 5px;
   &:hover {
     background-image: linear-gradient(
