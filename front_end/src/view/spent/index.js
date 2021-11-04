@@ -1,7 +1,7 @@
 import React from "react";
 import Table from "../../components/table/index";
 import server from "../../server/server";
-import { ButtonReturn } from "./styles";
+import { ButtonReturn, Content } from "./styles";
 import { useHistory } from "react-router-dom";
 
 function Spent() {
@@ -26,12 +26,14 @@ function Spent() {
       >
         Retorno
       </ButtonReturn>
-      <Table
-        title="Lista de jogadores"
-        columnNames={spent ? Object.keys(spent[0]) : []}
-        columns={spent ? Object.keys(spent[0]) : []}
-        data={spent ? spent : []}
-      ></Table>
+      <Content>
+        <Table
+          title="Lista de jogadores"
+          columnNames={spent ? Object.keys(spent[0]) : []}
+          columns={spent ? Object.keys(spent[0]) : []}
+          data={spent ? spent : []}
+        ></Table>
+      </Content>
     </div>
   );
 }

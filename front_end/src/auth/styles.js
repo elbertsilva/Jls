@@ -48,6 +48,7 @@ export const Button = styled(Link)`
   font-size: 1rem;
   justify-content: center;
   margin-top: 10px;
+  padding: 10px;
   text-decoration: none;
-  width: 30%;
+  /* width: 30%; */
 `;

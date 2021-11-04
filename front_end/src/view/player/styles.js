@@ -62,7 +62,7 @@ export const Button = styled.button`
   color: #000;
   font-size: 1rem;
   margin: 10px;
-  padding: 10px 25px;
+  padding: 10px;
 `;
 
 export const Table = styled.table`
@@ -93,7 +93,7 @@ export const ButtonReturn = styled.button`
   font-size: 1rem;
   justify-content: flex-end;
   margin-left: auto;
-  padding: 5px;
+  padding: 10px;
   &:hover {
     background-image: linear-gradient(
       to left,

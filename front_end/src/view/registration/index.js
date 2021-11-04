@@ -13,6 +13,7 @@ import {
 } from "./styles";
 import TableAdd from "../../components/tableAdd";
 import { ButtonEdit, ButtonDelete } from "../../components/tableAdd/styles";
+import Popup from "../../components/popup";
 
 const initialState = {
   id: undefined,
@@ -110,7 +111,7 @@ function Registration() {
             </Button>
           </Content>
         </div>
-        <div>
+        {/* <div>
           <TableAdd
             columns={teste ? Object.keys(teste[0]) : []}
             data={teste ? teste : []}
@@ -126,7 +127,7 @@ function Registration() {
               ),
             ]}
           ></TableAdd>
-        </div>
+        </div> */}
       </Container>
     </>
   );

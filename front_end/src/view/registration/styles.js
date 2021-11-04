@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 10px; */
+  /* padding: 20px; */
   @media (max-width: 1024px) {
     gap: 10px;
     grid-template-columns: 1fr;
@@ -22,7 +23,8 @@ export const ButtonReturn = styled.button`
   font-size: 1rem;
   justify-content: flex-end;
   margin-left: auto;
-  padding: 5px;
+  margin-bottom: 100px;
+  padding: 10px;
   &:hover {
     background-image: linear-gradient(
       to left,
@@ -37,7 +39,6 @@ export const ButtonReturn = styled.button`
 `;
 export const Content = styled.div`
   align-items: center;
-  /* background-color: #0066ff; */
   background-image: linear-gradient(
     to left,
     #d9dff8,
@@ -52,10 +53,9 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
-  height: 100%;
-  justify-items: stretch;
+  /* justify-items: stretch; */
+  justify-content: center;
   padding: 30px;
-  width: 100%;
 `;
 export const Title = styled.h1`
   grid-column: 1/-1;

@@ -79,5 +79,6 @@ export const ButtonLogout = styled.button`
     );
     color: #000;
   }
+  padding: 10px;
   text-align: center;
 `;

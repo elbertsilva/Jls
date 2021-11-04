@@ -51,7 +51,7 @@ function Auth() {
         ></input>
         {error}
 
-        <Button to={"/home"}>Enviar</Button>
+        <Button to={"/home"}>Entrar</Button>
       </Content>
     </Container>
   );

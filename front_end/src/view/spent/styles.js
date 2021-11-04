@@ -11,7 +11,8 @@ export const ButtonReturn = styled.button`
   font-size: 1rem;
   justify-content: flex-end;
   margin-left: auto;
-  padding: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
   &:hover {
     background-image: linear-gradient(
       to left,
@@ -23,4 +24,7 @@ export const ButtonReturn = styled.button`
     );
     color: #000;
   }
+`;
+export const Content = styled.div`
+  padding: 20px;
 `;
