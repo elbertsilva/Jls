@@ -26,7 +26,6 @@ function PopupEdit({ closePopup, data }) {
       });
       setPost(initialState);
       setPopup(true);
-      closePopup();
     }
   }
 
