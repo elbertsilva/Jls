@@ -86,7 +86,12 @@ function Registration() {
             </Button>
           </Content>
         </div>
-        {popup && <Popup closePopup={() => setPopup(false)} />}
+        {popup && (
+          <Popup
+            closePopup={() => setPopup(false)}
+            title="Cadastrado com sucesso!"
+          />
+        )}
       </Container>
     </>
   );

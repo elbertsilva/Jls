@@ -2,7 +2,7 @@ import React from "react";
 
 import { Container, Content } from "./styles";
 
-function Popup({ closePopup }) {
+function Popup({ closePopup, title }) {
   return (
     <Container
       onClick={({ target, currentTarget }) => {
@@ -12,7 +12,7 @@ function Popup({ closePopup }) {
       }}
     >
       <Content>
-        <hi>Cadastro efetuado com sucesso!</hi>
+        <hi>{title}</hi>
       </Content>
     </Container>
   );

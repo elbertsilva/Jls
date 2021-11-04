@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Content, Input, ButtonEdit } from "./styles";
 import server from "../../server/server";
+import Popup from "../popup";
 
 const initialState = {
   id: undefined,
@@ -23,10 +24,10 @@ function PopupEdit({ closePopup, data }) {
         posicao: post.posicao,
         date_nasc: post.date_nasc,
       });
+      setPost(initialState);
+      setPopup(true);
+      closePopup();
     }
-    setPost(initialState);
-    setPopup(true);
-    closePopup();
   }
 
   React.useEffect(() => {
@@ -74,6 +75,12 @@ function PopupEdit({ closePopup, data }) {
           Editar
         </ButtonEdit>
       </Content>
+      {popup && (
+        <Popup
+          closePopup={() => setPopup(false)}
+          title="Editado com sucesso!"
+        />
+      )}
     </Container>
   );
 }
