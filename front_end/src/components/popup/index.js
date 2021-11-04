@@ -2,12 +2,12 @@ import React from "react";
 
 import { Container, Content } from "./styles";
 
-function Popup({ closeModal }) {
+function Popup({ closePopup }) {
   return (
     <Container
       onClick={({ target, currentTarget }) => {
         if (target === currentTarget) {
-          closeModal();
+          closePopup();
         }
       }}
     >

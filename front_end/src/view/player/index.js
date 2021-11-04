@@ -3,12 +3,21 @@ import server from "../../server/server";
 import { useHistory } from "react-router-dom";
 import { Div } from "./styles";
 import Table from "../../components/table/";
-import { ButtonReturn } from "./styles";
+import { ButtonReturn, Input } from "./styles";
+import { ButtonEdit, ButtonDelete } from "../../components/tableAdd/styles";
+import PopupEdit from "../../components/popupEdit";
 
-// const initialState = { id: undefined, nome: "", cidade: "" };
+const initialState = {
+  id: undefined,
+  nome: "",
+  cidade: "",
+  posicao: "",
+  date_nasc: null,
+};
 
 function Player() {
-  // const [post, setPost] = React.useState(initialState);
+  const [popup, setPopup] = React.useState(false);
+  const [post, setPost] = React.useState(initialState);
   const [teste, setGet] = React.useState(null);
   const history = useHistory();
   async function getTeste() {
@@ -21,92 +30,27 @@ function Player() {
     getTeste();
   }, []);
 
-  // async function handleClick() {
-  //   if (post.id) {
-  //     await server.put(`/edit/${post.id}`, {
-  //       nome: post.nome,
-  //       cidade: post.cidade,
-  //     });
-  //     getTeste();
-  //     setPost(initialState);
-  //   } else {
-  //     await server.post("/cadastro", post);
-  //     console.log(post);
-  //     getTeste();
-  //     setPost(initialState);
-  //   }
-  // }
+  async function getTeste() {
+    const data = await server.get("/teste");
+    console.log(data.data);
+    setGet(data.data);
+  }
 
-  // async function handleDelete(id) {
-  //   await server.delete(`/delete/${id}`);
-  //   getTeste();
-  // }
+  React.useEffect(() => {
+    getTeste();
+  }, []);
+  async function handleDelete(id) {
+    await server.delete(`/delete/${id}`);
+    getTeste();
+  }
 
-  // async function handleEdit(data) {
-  //   setPost(data);
-  // }
+  async function handleEdit(data) {
+    console.log(data);
+    setPopup(true);
+    setPost(data);
+  }
 
   return (
-    //   <Container>
-    //     <Header>
-    //       <ButtonLogout
-    //         onClick={() => {
-    //           localStorage.removeItem("token");
-    //           history.push("/");
-    //         }}
-    //       >
-    //         Logout
-    //       </ButtonLogout>
-    //     </Header>
-    //     <Div>
-    //       <Content>
-    //         <Title>Make your registration</Title>
-
-    //         <Input
-    //           type="name"
-    //           value={post.nome}
-    //           onChange={(e) => setPost({ ...post, nome: e.target.value })}
-    //           placeholder="Name"
-    //         ></Input>
-
-    //         <Input
-    //           type="name"
-    //           value={post.cidade}
-    //           onChange={(e) => setPost({ ...post, cidade: e.target.value })}
-    //           placeholder="City"
-    //         ></Input>
-    //         <Button onClick={handleClick} style={{ background: "#b3b3b3" }}>
-    //           Send
-    //         </Button>
-    //       </Content>
-    //     </div>
-    //     <div>
-    //       <Table>
-    //         <tr>
-    //           <th>Id</th>
-    //           <th>Name</th>
-    //           <th>City</th>
-    //         </tr>
-    //         {get.map((data) => (
-    //           <tr key={data.id}>
-    //             <td>{data.id}</td>
-    //             <td>{data.nome}</td>
-    //             <td>{data.cidade}</td>
-    //             <td>
-    //               <Button onClick={() => handleEdit(data)} color={"#b3b3b3"}>
-    //                 Edit
-    //               </Button>
-    //             </td>
-    //             <td>
-    //               <Button onClick={() => handleDelete(data.id)} color={"#b3b3b3"}>
-    //                 Delete
-    //               </Button>
-    //             </td>
-    //           </tr>
-    //         ))}
-    //       </Table>
-    //     </div>
-    //   </Container>
     <>
       <ButtonReturn
         onClick={() => {
@@ -117,13 +61,24 @@ function Player() {
       </ButtonReturn>
       <Div>
         <Table
+          title="Lista de jogadores"
           columnNames={["nome", "cidade", "data_nasc", "posicao"]}
-          // columns={teste ? Object.keys(teste[0]) : []}
           columns={["nome", "cidade", "date_nasc", "posicao"]}
           data={teste ? teste : []}
-          title="Lista de jogadores"
+          columnButtons={[
+            (data) => (
+              <ButtonEdit onClick={() => handleEdit(data)}>Editar</ButtonEdit>
+            ),
+            (data) => (
+              <ButtonDelete onClick={() => handleDelete(data.id)}>
+                Deletar
+              </ButtonDelete>
+            ),
+          ]}
         ></Table>
       </Div>
+
+      {popup && <PopupEdit data={post} closePopup={() => setPopup(false)} />}
     </>
   );
 }

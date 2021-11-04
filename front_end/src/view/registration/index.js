@@ -4,15 +4,11 @@ import { useHistory } from "react-router-dom";
 import {
   Container,
   Content,
-  Header,
-  Table,
   Button,
   Title,
   ButtonReturn,
   Input,
 } from "./styles";
-import TableAdd from "../../components/tableAdd";
-import { ButtonEdit, ButtonDelete } from "../../components/tableAdd/styles";
 import Popup from "../../components/popup";
 
 const initialState = {
@@ -26,12 +22,10 @@ const initialState = {
 function Registration() {
   const [post, setPost] = React.useState(initialState);
   const [popup, setPopup] = React.useState(false);
-  const [teste, setGet] = React.useState(null);
   const history = useHistory();
   async function getTeste() {
     const data = await server.get("/teste");
     console.log(data.data);
-    setGet(data.data);
   }
 
   React.useEffect(() => {
@@ -39,32 +33,11 @@ function Registration() {
   }, []);
 
   async function handleClick() {
-    if (post.id) {
-      await server.put(`/edit/${post.id}`, {
-        nome: post.nome,
-        cidade: post.cidade,
-        posicao: post.posicao,
-        date_nasc: post.date_nasc,
-      });
-      getTeste();
-      setPost(initialState);
-    } else {
-      await server.post("/cadastro", post);
-      console.log(post);
-      getTeste();
-      setPost(initialState);
-    }
-    setPopup(true);
-  }
-
-  async function handleDelete(id) {
-    await server.delete(`/delete/${id}`);
+    await server.post("/cadastro", post);
+    console.log(post);
     getTeste();
-  }
-
-  async function handleEdit(data) {
-    console.log(data);
-    setPost(data);
+    setPost(initialState);
+    setPopup(true);
   }
 
   return (
@@ -113,24 +86,7 @@ function Registration() {
             </Button>
           </Content>
         </div>
-        {popup && <Popup closeModal={() => setPopup(false)} />}
-        {/* <div>
-          <TableAdd
-            columns={teste ? Object.keys(teste[0]) : []}
-            data={teste ? teste : []}
-            title="Lista de jogadores"
-            columnButtons={[
-              (data) => (
-                <ButtonEdit onClick={() => handleEdit(data)}>Editar</ButtonEdit>
-              ),
-              (data) => (
-                <ButtonDelete onClick={() => handleDelete(data.id)}>
-                  Deletar
-                </ButtonDelete>
-              ),
-            ]}
-          ></TableAdd>
-        </div> */}
+        {popup && <Popup closePopup={() => setPopup(false)} />}
       </Container>
     </>
   );
