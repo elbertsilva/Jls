@@ -26,5 +26,14 @@ export const ButtonReturn = styled.button`
   }
 `;
 export const Content = styled.div`
+  animation: ccc 1.2s ease forwards;
   padding: 20px;
+  @keyframes ccc {
+    from {
+      transform: scale(0, 0);
+    }
+    to {
+      transform: initial;
+    }
+  }
 `;

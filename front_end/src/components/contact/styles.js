@@ -10,6 +10,7 @@ export const Container = styled.div`
   width: 100%;
 `;
 export const Content = styled.div`
+  animation: jls 1.2s ease forwards;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
@@ -18,6 +19,14 @@ export const Content = styled.div`
   font-size: 1rem;
   grid-template-columns: repeat(2, 1fr);
   padding: 20px;
+  @keyframes jls {
+    from {
+      transform: translateY(400px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
   @media (max-width: 1200px) {
     font-size: small;
     gap: 10px;

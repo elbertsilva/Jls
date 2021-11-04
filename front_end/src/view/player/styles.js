@@ -80,7 +80,16 @@ export const Input = styled.input`
   padding: 10px;
 `;
 export const Div = styled.div`
-  padding: 80px; ;
+  animation: ccc 1.2s ease forwards;
+  padding: 20px;
+  @keyframes ccc {
+    from {
+      transform: scale(0, 0);
+    }
+    to {
+      transform: initial;
+    }
+  }
 `;
 export const ButtonReturn = styled.button`
   background-color: transparent;

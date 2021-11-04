@@ -2,15 +2,19 @@ import React from "react";
 
 import { Container, Content } from "./styles";
 
-function Popup() {
+function Popup({ closeModal }) {
   return (
-    <div>
-      <Container>
-        <Content>
-          <hi>Cadastro efetuado com sucesso</hi>
-        </Content>
-      </Container>
-    </div>
+    <Container
+      onClick={({ target, currentTarget }) => {
+        if (target === currentTarget) {
+          closeModal();
+        }
+      }}
+    >
+      <Content>
+        <hi>Cadastro efetuado com sucesso!</hi>
+      </Content>
+    </Container>
   );
 }
 

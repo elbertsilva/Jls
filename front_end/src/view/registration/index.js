@@ -25,6 +25,7 @@ const initialState = {
 
 function Registration() {
   const [post, setPost] = React.useState(initialState);
+  const [popup, setPopup] = React.useState(false);
   const [teste, setGet] = React.useState(null);
   const history = useHistory();
   async function getTeste() {
@@ -53,6 +54,7 @@ function Registration() {
       getTeste();
       setPost(initialState);
     }
+    setPopup(true);
   }
 
   async function handleDelete(id) {
@@ -111,6 +113,7 @@ function Registration() {
             </Button>
           </Content>
         </div>
+        {popup && <Popup closeModal={() => setPopup(false)} />}
         {/* <div>
           <TableAdd
             columns={teste ? Object.keys(teste[0]) : []}
