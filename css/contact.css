@@ -1,0 +1,21 @@
+.contact-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  /* grid-template-columns: 1fr 2fr; */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+}
+.contact li {
+  color: #141414;
+  font-weight: bold;
+  font-family: "Fira Sans", Arial, sans-serif;
+  font-size: 1.5rem;
+  list-style: none;
+}

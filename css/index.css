@@ -1,0 +1,195 @@
+#body-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+#tabela {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.table {
+  animation: aaa 1.2s ease forwards;
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+  border-collapse: collapse;
+  font-size: 19px;
+  font-weight: bold;
+  justify-content: space-around;
+  padding: 30px;
+  text-align: left;
+}
+tr:nth-child(n + 2) th,
+td {
+  border: 1px solid #dddddd;
+  padding: 5px;
+}
+.table tr td input {
+  width: 100%;
+}
+.table tbody {
+  width: 100%;
+}
+#tabela {
+  display: none;
+}
+
+.add {
+  animation: bbb 1.2s ease forwards;
+  border: 3px solid #28a745;
+  background: #28a745;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 5px;
+}
+#add:hover {
+  background-color: #218838;
+  color: #fff;
+}
+#edit {
+  animation: bbb 1.2s ease forwards;
+  border: 3px solid #f1c72f;
+  background: #f1c72f;
+  border-radius: 5px;
+  color: #000;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 5px;
+}
+#edit:hover {
+  background-color: #cc9900;
+  color: #000;
+}
+#delete {
+  animation: bbb 1.2s ease forwards;
+  border: 3px solid #ff4d4d;
+  background: #ff4d4d;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 5px;
+}
+#delete:hover {
+  background-color: #e60000;
+}
+#send {
+  animation: bbb 1.2s ease forwards;
+  border: 3px solid #0000ff;
+  background: #0000ff;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 5px;
+}
+#send:hover {
+  background-color: #0047b3;
+  color: #fff;
+}
+#container1 {
+  animation: aaa 1.2s ease forwards;
+  align-items: center;
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+  border-collapse: collapse;
+  cursor: pointer;
+  display: none;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 30px;
+  z-index: 1000000000;
+}
+#content1 {
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+}
+#container2 {
+  align-items: center;
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+  cursor: pointer;
+  display: none;
+  gap: 10px;
+  justify-content: center;
+  padding: 30px;
+  z-index: 000000;
+}
+#content2 {
+  cursor: pointer;
+  display: flex;
+}
+#container3 {
+  align-items: center;
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+  cursor: pointer;
+  display: none;
+  gap: 10px;
+  justify-content: center;
+  padding: 30px;
+  z-index: 000000;
+}
+#content3 {
+  cursor: pointer;
+  display: flex;
+}
+#contact {
+  bottom: 2%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  gap: 10px;
+  padding: 5px;
+  position: fixed;
+  right: 1%;
+}
+#comunicar {
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+  color: #000;
+  cursor: pointer;
+  display: none;
+  font-size: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  padding: 10px;
+}
+#btContact {
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+  color: #000;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+@keyframes aaa {
+  from {
+    transform: translateH(100px);
+  }
+  to {
+    transform: translateH(0);
+  }
+}
+@keyframes bbb {
+  from {
+    transform: scale(-2, -0);
+  }
+  to {
+    transform: initial;
+  }
+}
+@media (max-width: 1300px) {
+  .table {
+    display: flex;
+  }
+}

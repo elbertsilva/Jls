@@ -1,0 +1,41 @@
+#header {
+  align-items: center;
+  background: #000;
+  display: flex;
+  height: 10vh;
+  justify-content: space-around;
+  width: 100%;
+}
+#title {
+  align-items: center;
+  color: #fff;
+  font-size: 2rem;
+  justify-content: center;
+}
+#logo {
+  align-items: center;
+  background: #fff;
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+  color: #f1c72f;
+  display: flex;
+  font-size: 2rem;
+  height: 25%;
+  justify-content: center;
+  padding: 20px;
+}
+#logout {
+  align-items: flex-end;
+  border: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+  cursor: pointer;
+  font-size: 2rem;
+  justify-content: flex-end;
+  padding: 5px;
+}
+#logout:hover {
+  background: #ccc;
+  color: #000;
+}
