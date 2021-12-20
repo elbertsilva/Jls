@@ -1,6 +1,6 @@
 var getIdSelected;
 function btAdd() {
-  document.getElementById("container1").style.display = "block";
+  document.getElementById("table-add").style.display = "block";
 }
 function bt3() {
   document.getElementById("container3").style.display = "block";
