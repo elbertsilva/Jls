@@ -21,6 +21,9 @@
   padding: 30px;
   text-align: left;
 }
+.table th {
+  padding: 10px;
+}
 tr:nth-child(n + 2) th,
 td {
   border: 1px solid #dddddd;
