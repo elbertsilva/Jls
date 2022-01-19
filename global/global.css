@@ -1,0 +1,19 @@
+body {
+  /* background-image: linear-gradient(
+    to left,
+    #d9dff8,
+    #e4e7fa,
+    #eeeefb,
+    #f7f7fd,
+    #ffffff
+  ); */
+  background: #fff;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

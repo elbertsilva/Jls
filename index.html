@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" href="global/global.css" />
+    <link rel="stylesheet" type="text/css" href="css/contact.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="jquery/jquery-3.5.1.min.js"></script>
+    <title>Jls sports</title>
+  </head>
+  <body>
+    <header id="header">
+      <p id="logo">JLS</p>
+      <p id="title">JLS SPORTS</p>
+      <button id="logout" type="button">SAIR</button>
+    </header>
+    <section id="body-button">
+      <button id="send" type="button" onclick="btSend()">JOGADORES</button>
+      <button class="add" type="button" onclick="btAdd()">ADICIONAR</button>
+      <button id="edit" type="button" onclick="btUpdate()">EDITAR</button>
+      <button id="delete" type="button" onclick="btDelete()">EXCLUR</button>
+    </section>
+    <div id="tabela">
+      <table class="table">
+        <tr>
+          <th></th>
+          <th>Id</th>
+          <th>Nome</th>
+          <th>Cidade</th>
+          <th>Data de nascimento</th>
+          <th>Posição</th>
+        </tr>
+      </table>
+    </div>
+    <div id="container1">
+      <div id="content1">
+        <input type="name" id="inp1" placeholder="Nome" />
+        <input type="name" id="inp2" placeholder="Cidade" />
+        <input type="date" id="inp3" />
+        <input type="name" id="inp4" placeholder="Posição" />
+        <button class="add" type="button" onclick="btRegister()">
+          ADICIONAR
+        </button>
+      </div>
+    </div>
+    <section class="contact">
+      <div class="contact-container">
+        <p contact-text>
+          Estou disponível para avaliação. Entre em contato comigo para agendar
+          uma conversa.
+        </p>
+        <ul>
+          <li>teste@teste.com.br</li>
+          <li>+55 00 00000-0000</li>
+        </ul>
+      </div>
+    </section>
+    <!-- <footer id="contact">
+      <div id="comunicar">
+        <p>Email:</p>
+        <p>teste@teste.com.br</p>
+        <p>Telefone:</p>
+        <p>000000000</p>
+        <p>cidade:</p>
+        <p>Indaiatba-SP</p>
+      </div>
+      <button id="btContact" type="button" onclick="btContact()">
+        CONTATO
+      </button>
+    </footer> -->
+  </body>
+</html>
